@@ -7,15 +7,19 @@ An interactive, donation-powered flag racing game perfect for YouTube Live strea
 ### ⚡ Core Features
 - **4 Countries Racing**: USA 🇺🇸, India 🇮🇳, Japan 🇯🇵, UK 🇬🇧
 - **Real-time Racing**: Flags race horizontally across the screen
+- **30-Minute Races**: Optimized for extended streaming sessions
+- **Online Flag Images**: Real country flags from FlagCDN API
 - **Donation-Powered**: SuperChats and donations give speed boosts
 - **YouTube Live Ready**: Fully visible and interactive in live streams
+- **Mobile Friendly**: Fully responsive design with no horizontal scrolling
 
 ### 🎮 Interactive Features
 
 #### Viewer-Triggered Actions
 - **Chat Commands**: 
-  - `!boost [country]` - Adds speed boost to a country
+  - `!boost [country]` - Adds speed boost to a specific country
   - `!vote [country]` - Vote for your favorite country
+  - **Any chat message** - Automatically boosts all racers slightly!
 - **Donations**: Real-time speed boosts based on donation amount
 - **Like Goals**: Every 50 likes triggers a random wind push
 
@@ -34,16 +38,17 @@ An interactive, donation-powered flag racing game perfect for YouTube Live strea
 - Crowd cheering effects
 
 #### Game Mechanics
-- **Leaderboard**: Tracks wins across multiple rounds
+- **30-Minute Race Duration**: Optimized speeds for extended gameplay
+- **Leaderboard**: Tracks wins across multiple rounds, updates every 5 seconds
 - **Mini-Events**: Random events every 30 seconds:
   - 🌪️ Storm: Speeds cut in half
-  - 💨 Tailwind: Everyone gains +1 speed
+  - 💨 Tailwind: Everyone gains speed boost
   - 🔥 Power Surge: Random country gets x2 speed
-- **Donation Tiers**:
-  - $10: Speed Boost (+0.5 for 5s)
-  - $50: Super Boost (+2 for 10s)
-  - $100: Nitro Boost (x2 speed + glow for 10s)
-  - $500+: Mega Boost (Lightning + fireworks for 15s)
+- **Donation Tiers** (adjusted for 30-min races):
+  - $10: Speed Boost (0.01 for 5s)
+  - $50: Super Boost (0.03 for 10s)
+  - $100: Nitro Boost (1.5x multiplier + 0.05 for 10s)
+  - $500+: Mega Boost (2x multiplier + 0.08 for 15s)
 
 #### Top Supporters
 - Displays top 5 supporters after each race
