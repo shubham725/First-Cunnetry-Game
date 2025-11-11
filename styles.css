@@ -98,7 +98,7 @@ body {
 /* Race Track */
 .race-track {
     position: absolute;
-    top: 50%;
+    
     left: 0;
     transform: translateY(-50%);
     width: 100%;
@@ -912,7 +912,8 @@ body {
 
     /* Compact race area */
     .race-track {
-        margin-top: 20px;
+        margin-top: -100px;
+        margin-bottom: 140px;
         height: 200px;
     }
 
@@ -1027,6 +1028,7 @@ body {
     
     .race-track {
         height: 350px;
+      
     }
 }
 
