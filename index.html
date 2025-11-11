@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Flag Race Live: The World Speed Cup 🏁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Dynamic Background -->
+        <div class="background-layer" id="backgroundLayer"></div>
+        
+        <!-- Game Header -->
+        <div class="game-header">
+            <h1>🏁 Flag Race Live: The World Speed Cup</h1>
+            <div class="race-info">
+                <div class="timer" id="timer">00:00</div>
+                <div class="round-counter">Round <span id="roundNumber">1</span></div>
+            </div>
+        </div>
+
+        <!-- Race Track -->
+        <div class="race-track" id="raceTrack">
+            <div class="finish-line"></div>
+            <div class="flag-racer" data-country="usa" id="racer-usa">
+                <div class="flag-display"><img src="https://flagcdn.com/w160/us.png" alt="USA Flag" class="flag-image"></div>
+                <div class="racer-name">USA</div>
+                <div class="speed-indicator" id="speed-usa">0</div>
+                <div class="boost-overlay" id="boost-usa"></div>
+            </div>
+            <div class="flag-racer" data-country="india" id="racer-india">
+                <div class="flag-display"><img src="https://flagcdn.com/w160/in.png" alt="India Flag" class="flag-image"></div>
+                <div class="racer-name">India</div>
+                <div class="speed-indicator" id="speed-india">0</div>
+                <div class="boost-overlay" id="boost-india"></div>
+            </div>
+            <div class="flag-racer" data-country="japan" id="racer-japan">
+                <div class="flag-display"><img src="https://flagcdn.com/w160/jp.png" alt="Japan Flag" class="flag-image"></div>
+                <div class="racer-name">Japan</div>
+                <div class="speed-indicator" id="speed-japan">0</div>
+                <div class="boost-overlay" id="boost-japan"></div>
+            </div>
+            <div class="flag-racer" data-country="uk" id="racer-uk">
+                <div class="flag-display"><img src="https://flagcdn.com/w160/gb.png" alt="UK Flag" class="flag-image"></div>
+                <div class="racer-name">UK</div>
+                <div class="speed-indicator" id="speed-uk">0</div>
+                <div class="boost-overlay" id="boost-uk"></div>
+            </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard-container">
+            <h2>🏆 Leaderboard</h2>
+            <div class="leaderboard" id="leaderboard">
+                <!-- Leaderboard entries will be dynamically generated -->
+            </div>
+        </div>
+
+        <!-- Event Display -->
+        <div class="event-display" id="eventDisplay"></div>
+
+        <!-- Winner Announcement -->
+        <div class="winner-announcement" id="winnerAnnouncement"></div>
+
+        <!-- Top Supporters -->
+        <div class="supporters-container">
+            <h3>⭐ Top Supporters</h3>
+            <div class="supporters-list" id="supportersList"></div>
+        </div>
+
+        <!-- Control Panel (for testing/simulation) -->
+        <div class="control-panel">
+            <h3>🎮 Control Panel</h3>
+            <div class="controls">
+                <button onclick="simulateChatCommand('!boost usa')">Chat: !boost usa</button>
+                <button onclick="simulateDonation('usa', 100)">Donate $100 to USA</button>
+                <button onclick="simulateDonation('india', 50)">Donate $50 to India</button>
+                <button onclick="simulateDonation('japan', 500)">Mega Boost Japan</button>
+                <button onclick="triggerRandomEvent()">Random Event</button>
+            </div>
+        </div>
+
+        <!-- Chat Simulation -->
+        <div class="chat-simulation">
+            <h3>💬 Live Chat</h3>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Type message or !boost [country]" onkeypress="handleChatInput(event)" autocomplete="off">
+                <button onclick="sendChatMessage()" class="chat-send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
